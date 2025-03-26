@@ -1,0 +1,146 @@
+/* General styling */
+.main-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Ensure images fit properly */
+.card-media {
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Card container */
+.card-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Individual card styling */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Card content */
+.card-body {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Card number */
+.card-number {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff5722;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Card author */
+.card-author {
+    display: block;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+/* Card title */
+.card-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Card description */
+.card-description {
+    font-size: 14px;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+/* Order now button */
+.card-tag {
+    display: block;
+    text-align: center;
+    background-color: #ff9800;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.card-tag:hover {
+    background-color: #e68900;
+}
+
+/* Media query to ensure responsiveness */
+@media screen and (max-width: 1024px) {
+    .main-card-container {
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .main-card-container {
+        grid-template-columns: repeat(3, 1fr); /* Still 3 columns */
+        gap: 10px; /* Reduce gap on smaller screens */
+    }
+    .card {
+        max-width: 250px; /* Shrink cards slightly */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-card-container {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .main-card-container {
+        grid-template-columns: repeat(3, 1fr); /* Keep 3 columns even on smaller screens */
+        gap: 5px;
+    }
+    .card {
+        max-width: 180px; /* Make sure cards don't overflow */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-card-container {
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
+    }
+}

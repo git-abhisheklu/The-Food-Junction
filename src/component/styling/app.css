@@ -1,0 +1,7 @@
+body {
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repetition */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    background-color: antiquewhite;
+}
